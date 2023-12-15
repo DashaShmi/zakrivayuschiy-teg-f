@@ -24,5 +24,6 @@
     --accent-color: #00cc14;
     --font-header: 785;
     --font-descr: 465;
+    --background-image: var(--bg-image-dark);
   }
 }

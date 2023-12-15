@@ -21,4 +21,14 @@
   font-variation-settings: "wght" var(--font-descr);
   background-color: var(--bg-color);
   color: var(--text-color);
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-attachment: fixed;
 }
+
+/* градиенты для светлой темы
+.bg-gradient {
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-attachment: fixed;
+} */
