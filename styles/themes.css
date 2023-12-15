@@ -6,13 +6,20 @@
 */
 :root.theme-dark {
   --bg-color: black;
-  --accent-color: #00cc14;
+  --text-color: #00cc14;
   --font-header: 785;
   --font-descr: 465;
 }
 
+:root.theme-light {
+  --font-header: 700;
+  --font-descr: 400;
+  --bg-color: white;
+  --text-color: black;
+}
+
 @media (prefers-color-scheme: dark) {
-  .page {
+  :root {
     --bg-color: black;
     --accent-color: #00cc14;
     --font-header: 785;
