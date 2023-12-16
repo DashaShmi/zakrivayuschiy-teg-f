@@ -20,8 +20,10 @@
     <!-- <svg viewBox="0 0 40 40">
       <use href="svg/floppy.svg#floppy"></use>
     </svg> -->
-    <header class="header">
+    <header class="header centered">
       <nav class="theme-menu header__theme-menu">
+        <h1>&lt;/HTML&gt;</h1>
+        <h3>закрывающий тег</h3>
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
         <ul class="theme-menu__list">
           <li class="theme-menu__item">
@@ -47,7 +49,29 @@
         </ul>
       </nav>
     </header>
-    <main></main>
+    <main class="centered">
+      <div class="card">
+        <h2 class="header-card">
+          Фритрек и нулевой спринт: Подготовка к работе
+        </h2>
+        <img src="#" loading="lazy" alt="фургон для путешествий" />
+        <p>
+          Это было самое начало пути. На этом этапе важно было проникнуться
+          основами и настроиться на учёбу. И, возможно, подумать, как новые
+          знания могут повлиять на ваше будущее.
+        </p>
+        <p>Место для ваших воспоминаний о начале обучения.</p>
+        <button class="card__icon-button is-liked">
+          <svg class="like-icon"></svg>
+        </button>
+        <button class="card__like-button">
+          <span class="button__text">Like</span>
+        </button>
+      </div>
+    </main>
+    <footer class="centered">
+      <div>закрывающий тег</div>
+    </footer>
     <script src="./scripts/like.js"></script>
   </body>
 </html>

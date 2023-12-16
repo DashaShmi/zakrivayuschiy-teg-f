@@ -2,6 +2,7 @@
 :root {
   --acсent-font: "Press Start 2", monospace, sans-serif;
   --main-font: "Inter", sans-serif;
+  /* --full-width: 100%; */
   /* тут меняются от темы */
   --font-header: 700;
   --font-descr: 400;
