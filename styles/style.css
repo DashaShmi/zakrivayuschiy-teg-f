@@ -160,4 +160,12 @@ footer .card__like-button {
   padding: 16.5px 19px;
   margin-top: 54px;
   background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+footer .card__like-button svg {
+  width: 21px;
 }
