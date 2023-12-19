@@ -220,7 +220,7 @@ p + p {
 }
 
 .button__text {
-  /* position: relative; */
+  position: relative;
   z-index: 1;
   color: var(--bg-color);
   mix-blend-mode: difference;
@@ -243,6 +243,14 @@ p + p {
   border-color: var(--text-color);
   outline: 0;
   transition: all 0.3s ease;
+}
+
+.card__icon-button .like-icon {
+  width: 39px;
+}
+
+.sparks {
+  opacity: 0;
 }
 
 footer.centered {
