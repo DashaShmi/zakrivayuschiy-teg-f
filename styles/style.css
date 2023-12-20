@@ -193,6 +193,7 @@ p + p {
   cursor: pointer;
   border: 2px solid;
   padding: 10.5px 35px;
+  /* min-width: 96px; */
   position: relative;
   overflow: hidden;
 }
@@ -251,6 +252,56 @@ p + p {
 
 .sparks {
   opacity: 0;
+}
+
+/* CORE */
+
+.core {
+  transition: fill 0.3s 0.03s ease;
+}
+
+.card__icon-button:hover .core {
+  fill: var(--text-color);
+  transition: fill 0.3s ease;
+}
+
+.card__icon-button:active .core {
+  fill: var(--fill-red);
+  transition: fill 0.3s ease;
+}
+
+.card__icon-button .is-liked .core {
+  fill: var(--fill-red);
+}
+
+/* MAIN BODY */
+
+.main-body {
+  transition: fill 0.3s ease;
+}
+
+.card__icon-button:hover .main-body {
+  fill: var(--text-color);
+  transition: fill 0.3s 0.05s ease;
+}
+
+.card__icon-button:active .main-body {
+  fill: var(--fill-red);
+  transition: fill 0.3s 0.05s ease;
+}
+
+.card__icon-button .is-liked .main-body {
+  fill: var(--fill-red);
+}
+
+/* CONTOUR */
+
+.card__icon-button .contour {
+  fill: var(--text-color);
+}
+
+.card__icon-button .is-liked .contour {
+  fill: var(--fill-red);
 }
 
 footer.centered {
