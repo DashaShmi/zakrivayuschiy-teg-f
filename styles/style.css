@@ -39,7 +39,7 @@
   font-family: var(--acсent-font);
   text-transform: uppercase;
   padding-bottom: 25px;
-  margin-bottom: 107px;
+  margin-bottom: 100px;
   background-color: var(--bg-color);
   border: 2px solid;
 }
@@ -51,6 +51,7 @@
 
 .subtitle {
   margin-bottom: 25px;
+  font-size: 23px;
 }
 
 .theme-menu {
@@ -73,6 +74,8 @@
 } */
 .theme-menu__item {
   position: relative;
+  /* чтоб подогнать по пиксельперфект */
+  left: 8px;
 }
 
 .theme-menu__button {
@@ -84,6 +87,9 @@
   position: relative;
   transition: all 0.3s ease;
   padding: 0;
+  text-transform: uppercase;
+  /* чтоб отсуп не появлялся(он есть у инлайновых элементов) */
+  display: block;
 }
 
 .theme-menu__button:hover {
@@ -153,11 +159,16 @@ p + p {
   margin-top: 27px;
 }
 
+p {
+  font-size: 18px;
+}
+
 .img__card {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   display: block;
+  object-position: right;
   border-bottom: 2px solid var(--text-color);
   border-top: 2px solid var(--text-color);
 }
@@ -256,7 +267,7 @@ p + p {
 .button__text {
   position: relative;
   z-index: 1;
-  color: var(--bg-color);
+  color: var(--button-text-color);
   mix-blend-mode: difference;
 }
 
@@ -264,6 +275,10 @@ p + p {
   display: flex;
   justify-content: end;
   gap: 7px;
+}
+
+p + .buttons {
+  margin-top: 25px;
 }
 /* сделать прозрачные отступы между картачками */
 .card {
@@ -381,7 +396,6 @@ footer.centered {
 
 footer .save__button {
   padding: 16.5px 19px;
-  margin-top: 54px;
   background-color: var(--bg-color);
   display: flex;
   justify-content: center;
@@ -391,6 +405,10 @@ footer .save__button {
 
 footer .save__button svg {
   width: 21px;
+  position: relative;
+  z-index: 1;
+  color: var(--button-text-color);
+  mix-blend-mode: difference;
 }
 
 dialog {
@@ -399,14 +417,7 @@ dialog {
 }
 
 dialog::backdrop {
-  background-image: linear-gradient(
-    45deg,
-    magenta,
-    rebeccapurple,
-    dodgerblue,
-    green
-  );
-  opacity: 0.75;
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 dialog svg {
