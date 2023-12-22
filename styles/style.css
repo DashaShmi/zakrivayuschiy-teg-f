@@ -451,12 +451,16 @@ dialog .generic__button {
     width: var(--full-width);
   }
 
+  .header-card {
+    padding: 5px 10px;
+  }
+
   .subtitle {
     font-size: 14px;
   }
 
   p + .buttons {
-    margin-top: 23px;
+    margin-top: 21px;
   }
 
   footer .save__button {
