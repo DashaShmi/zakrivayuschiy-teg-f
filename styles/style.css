@@ -68,12 +68,6 @@
   gap: 14px;
 }
 
-/* для мобильных устройств
-@media (width <= 375px) {
-  .page {
-    width: var(--full-width);
-  }
-} */
 .theme-menu__item {
   position: relative;
   /* чтоб подогнать по пиксельперфект */
@@ -173,7 +167,7 @@ p {
   /* чтоб картинка была квадратной и не включала в свой размер бордер */
   box-sizing: content-box;
   object-position: right;
-  border-bottom: 2px solid var(--text-color);
+  border-bottom: 4px solid var(--text-color);
   border-top: 2px solid var(--text-color);
 }
 
@@ -241,6 +235,7 @@ p {
   border: 2px solid;
   padding: 9px 17px;
   min-width: 130px;
+  min-height: 40px;
   position: relative;
   overflow: hidden;
 }
@@ -282,7 +277,7 @@ p {
 }
 
 p + .buttons {
-  margin-top: 19px;
+  margin-top: 25px;
 }
 /* сделать прозрачные отступы между картачками */
 .card {
@@ -296,6 +291,7 @@ p + .buttons {
   cursor: pointer;
   border: none;
   border: 2px solid transparent;
+  padding: 0;
 }
 
 .card__icon-button:focus-visible {
@@ -306,6 +302,7 @@ p + .buttons {
 
 .card__icon-button .like-icon {
   width: 39px;
+  display: block;
 }
 
 .sparks {
@@ -445,4 +442,32 @@ dialog svg {
 
 dialog .generic__button {
   width: 100%;
+}
+
+/* для мобильных устройств */
+
+@media (width <= 375px) {
+  .page {
+    width: var(--full-width);
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  p + .buttons {
+    margin-top: 23px;
+  }
+
+  footer .save__button {
+    flex-direction: column;
+  }
+
+  footer .save__button svg {
+    width: 28px;
+  }
+
+  footer .save__button {
+    padding: 15px 20px;
+  }
 }
