@@ -269,6 +269,9 @@ p {
   z-index: 1;
   color: var(--button-text-color);
   mix-blend-mode: difference;
+}
+
+dialog .button__text {
   text-transform: uppercase;
 }
 
@@ -282,7 +285,7 @@ p {
 p + .buttons {
   margin-top: 25px;
 }
-/* сделать прозрачные отступы между картачками */
+
 .card {
   margin-bottom: 49px;
   background-color: var(--bg-color);
@@ -309,10 +312,6 @@ p + .buttons {
 .card__icon-button .like-icon {
   width: 39px;
   display: block;
-}
-
-.sparks {
-  opacity: 0;
 }
 
 section {
@@ -395,6 +394,14 @@ dialog .generic__button {
 
   p + .buttons {
     margin-top: 21px;
+  }
+
+  section .save__button {
+    flex-direction: column;
+  }
+
+  section .save__button svg {
+    width: 28px;
   }
 
   footer .save__button svg {

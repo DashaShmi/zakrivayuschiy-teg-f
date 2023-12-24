@@ -22,68 +22,13 @@
   }
 }
 
-/* CORE */
-
-.core {
-  transition: fill 0.3s 0.03s ease;
-}
-
-.card__icon-button:hover .core {
-  fill: var(--text-color);
-  transition: fill 0.3s ease;
-}
-
-.card__icon-button:active .core {
-  fill: var(--fill-red);
-  transition: fill 0.3s ease;
-}
-
-.card__icon-button .is-liked .core {
-  fill: var(--fill-red);
-}
-
-/* MAIN BODY */
-
-.main-body {
-  transition: fill 0.3s linear;
-}
-
-.card__icon-button:hover .main-body {
-  fill: var(--text-color);
-  transition: fill 0.3s 0.05s linear;
-}
-
-.card__icon-button:active .main-body {
-  fill: var(--fill-red);
-  transition: fill 0.3s 0.05s linear;
-}
-
-.card__icon-button .is-liked .main-body {
-  fill: var(--fill-red);
-}
-
-/* CONTOUR */
-
-.card__icon-button .contour {
-  fill: var(--text-color);
-}
-
-.card__icon-button .is-liked .contour {
-  fill: var(--fill-red);
-}
-
-@keyframes scaleAnimation {
+@keyframes heartAnimation {
   0% {
     transform: scale(1);
   }
   100% {
     transform: scale(1.5);
   }
-}
-
-.is-liked .heart {
-  transform-origin: center;
-  animation: 0.3s 0.1s scaleAnimation ease-in alternate;
 }
 
 @keyframes sparksAnimation {
@@ -93,6 +38,63 @@
   100% {
     opacity: 100%;
   }
+}
+
+/* CORE */
+.card__icon-button .core {
+  fill: transparent;
+  transition: fill 0.3s 0.3s linear;
+}
+
+.card__icon-button:hover .core {
+  fill: var(--heart-stroke);
+  transition: fill 0.3s linear;
+}
+
+.card__icon-button:active .core {
+  fill: var(--heart-fill);
+}
+
+.like-icon.is-liked .core {
+  fill: var(--heart-fill);
+}
+
+.main-body {
+  fill: transparent;
+  transition: fill 0.3s linear;
+}
+
+.card__icon-button:hover .main-body {
+  fill: var(--heart-stroke);
+  transition: fill 0.3s 0.05s linear;
+}
+
+.card__icon-button:active .main-body {
+  fill: var(--heart-fill);
+  transition: fill 0.3s 0.05s linear;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--heart-fill);
+}
+
+.contour {
+  transition: fill 0.1s linear;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--heart-fill);
+  transition: fill 0.3s 0.06s linear;
+}
+
+.like-icon.is-liked .heart {
+  animation: heartAnimation 0.3s 0.1s ease-in alternate;
+  /* чтобы не обрезалось о соседнюю кнопку, выравнивалось но центру */
+  transform-origin: center;
+}
+
+.sparks {
+  opacity: 0;
 }
 
 .is-liked .sparks {

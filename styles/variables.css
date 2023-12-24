@@ -10,8 +10,8 @@
   --label-text: black;
   --label-shadow: white;
   --text-color: black;
-  /* ипользовать с font-variation-settings: */
-  --fill-red: #ff0000;
+  --heart-stroke: black;
+  --heart-fill: #ff0000;
   --button-text-color: white;
   --bg-image: repeating-linear-gradient(
       to left,

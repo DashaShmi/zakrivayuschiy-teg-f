@@ -12,6 +12,8 @@
   --button-text-color: #00cc14;
   --label-shadow: black;
   --label-text: #00cc14;
+  --heart-stroke: #00cc14;
+  --heart-fill: #ff0000;
   --bg-image: repeating-linear-gradient(
       to left,
       #000 0 2px,
@@ -32,8 +34,8 @@
   --label-shadow: white;
   --text-color: black;
   /* ипользовать с font-variation-settings: */
-
-  --fill-red: #ff0000;
+  --heart-stroke: black;
+  --heart-fill: #ff0000;
   --button-text-color: white;
   --bg-image: repeating-linear-gradient(
       to left,
@@ -53,6 +55,8 @@
     --button-text-color: #00cc14;
     --label-shadow: black;
     --label-text: #00cc14;
+    --heart-stroke: #00cc14;
+    --heart-fill: #ff0000;
     --bg-image: repeating-linear-gradient(
         to left,
         #000 0 2px,
