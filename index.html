@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="icon" href="./images/favicon.ico" sizes="any" />
     <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="./svg/favicon.svg" />
+    <link rel="apple-touch-icon" href="./images/favicon.png" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./styles/style.css" />
@@ -18,9 +18,9 @@
   </head>
   <body class="page bg-gradient">
     <header class="header centered">
+      <a class="title">&lt;/HTML&gt;</a>
+      <h1 class="subtitle">закрывающий тег</h1>
       <nav class="theme-menu header__theme-menu">
-        <h3 class="title">&lt;/HTML&gt;</h3>
-        <h1 class="subtitle">закрывающий тег</h1>
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
         <ul class="theme-menu__list">
           <li class="theme-menu__item">
@@ -68,7 +68,7 @@
           </p>
           <p>Был конец лета и мне захотелось изменить свою жизнь.</p>
           <div class="buttons">
-            <button class="card__icon-button">
+            <button class="card__icon-button" type="button">
               <svg
                 class="like-icon"
                 width="39"
@@ -76,6 +76,7 @@
                 viewBox="0 0 39 36"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
               >
                 <g class="heart">
                   <path
@@ -102,7 +103,7 @@
                 />
               </svg>
             </button>
-            <button class="generic__button card__like-button">
+            <button class="generic__button card__like-button" type="button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -542,30 +543,32 @@
           </div>
         </div>
       </div>
+      <section>
+        <button
+          type="button"
+          class="generic__button save__button"
+          onclick="window['dialog-id'].showModal()"
+          aria-controls="dialog-id"
+        >
+          <svg viewBox="0 0 40 40">
+            <use href="svg/floppy.svg#floppy"></use>
+          </svg>
+          <span class="button__text">Сохранить на память</span>
+        </button>
+      </section>
     </main>
-
-    <footer class="centered">
-      <button
-        class="generic__button save__button"
-        onclick="window['dialog-id'].showModal()"
-        aria-controls="dialog-id"
-      >
-        <svg viewBox="0 0 40 40">
-          <use href="svg/floppy.svg#floppy"></use>
-        </svg>
-        <span class="button__text">Сохранить на память</span>
-      </button>
-    </footer>
 
     <dialog id="dialog-id">
       <div class="wrapper__dialog">
         <svg viewBox="0 0 40 40">
           <use href="svg/floppy.svg#floppy"></use>
         </svg>
-        <div class="descr__dialog">Вставьте дискету, чтобы продолжить</div>
+        <form method="dialog">
+          <p class="descr__dialog">Вставьте дискету, чтобы продолжить</p>
+        </form>
       </div>
       <button class="generic__button" onclick="window['dialog-id'].close()">
-        <span class="button__text">OK</span>
+        <span class="button__text">ок</span>
       </button>
     </dialog>
     <script src="./scripts/like.js"></script>

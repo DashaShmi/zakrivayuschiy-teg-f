@@ -22,10 +22,19 @@
 }
 
 :root.theme-light {
+  --acсent-font: "Press Start 2P", monospace, sans-serif;
+  --main-font: "Inter", sans-serif;
+  /* тут меняются от темы */
   --font-header: 700;
   --font-descr: 400;
   --bg-color: white;
+  --label-text: black;
+  --label-shadow: white;
   --text-color: black;
+  /* ипользовать с font-variation-settings: */
+
+  --fill-red: #ff0000;
+  --button-text-color: white;
   --bg-image: repeating-linear-gradient(
       to left,
       #d3d3d3 0 2px,
@@ -38,9 +47,12 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --bg-color: black;
-    --accent-color: #00cc14;
+    --text-color: #00cc14;
     --font-header: 785;
     --font-descr: 465;
+    --button-text-color: #00cc14;
+    --label-shadow: black;
+    --label-text: #00cc14;
     --bg-image: repeating-linear-gradient(
         to left,
         #000 0 2px,

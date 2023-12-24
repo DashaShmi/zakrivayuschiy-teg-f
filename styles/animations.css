@@ -12,3 +12,89 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+@keyframes slideAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(4px);
+  }
+}
+
+/* CORE */
+
+.core {
+  transition: fill 0.3s 0.03s ease;
+}
+
+.card__icon-button:hover .core {
+  fill: var(--text-color);
+  transition: fill 0.3s ease;
+}
+
+.card__icon-button:active .core {
+  fill: var(--fill-red);
+  transition: fill 0.3s ease;
+}
+
+.card__icon-button .is-liked .core {
+  fill: var(--fill-red);
+}
+
+/* MAIN BODY */
+
+.main-body {
+  transition: fill 0.3s linear;
+}
+
+.card__icon-button:hover .main-body {
+  fill: var(--text-color);
+  transition: fill 0.3s 0.05s linear;
+}
+
+.card__icon-button:active .main-body {
+  fill: var(--fill-red);
+  transition: fill 0.3s 0.05s linear;
+}
+
+.card__icon-button .is-liked .main-body {
+  fill: var(--fill-red);
+}
+
+/* CONTOUR */
+
+.card__icon-button .contour {
+  fill: var(--text-color);
+}
+
+.card__icon-button .is-liked .contour {
+  fill: var(--fill-red);
+}
+
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+.is-liked .heart {
+  transform-origin: center;
+  animation: 0.3s 0.1s scaleAnimation ease-in alternate;
+}
+
+@keyframes sparksAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.is-liked .sparks {
+  animation: 0.3s 0.3s sparksAnimation ease-in alternate;
+}

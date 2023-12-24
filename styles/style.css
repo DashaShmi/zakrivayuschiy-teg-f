@@ -48,12 +48,15 @@
   font-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
   margin-bottom: 20px;
   font-style: normal;
+  display: block;
+  text-align: center;
 }
 
 .subtitle {
   margin-bottom: 25px;
   font-size: 23px;
   font-style: normal;
+  text-align: center;
 }
 
 .theme-menu {
@@ -97,6 +100,10 @@
   opacity: 0.6;
 }
 
+.theme-menu__button:focus {
+  outline: 0;
+}
+
 .theme-menu__button:focus-visible {
   outline: 0;
   opacity: 0.6;
@@ -119,15 +126,6 @@
   transform: scaleX(1);
 }
 
-@keyframes slideAnimation {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(4px);
-  }
-}
-
 .theme-menu__button:disabled:before {
   position: absolute;
   color: currentColor;
@@ -141,9 +139,9 @@
 
 .header-card {
   font-size: 18px;
-  font-variation-settings: "wght" 700;
   line-height: normal;
   padding: 3px 10px;
+  font-variation-settings: "wght" var(--font-header);
 }
 
 .descr__card {
@@ -166,7 +164,7 @@ p {
   display: block;
   /* чтоб картинка была квадратной и не включала в свой размер бордер */
   box-sizing: content-box;
-  object-position: right;
+  object-position: center;
   border-bottom: 4px solid var(--text-color);
   border-top: 2px solid var(--text-color);
 }
@@ -241,6 +239,10 @@ p {
   transition: box-shadow 0.3s ease;
 }
 
+.generic__button:focus {
+  outline: 0;
+}
+
 .generic__button:focus-visible {
   outline: 0;
   box-shadow: 2px 2px 0px 0px;
@@ -267,6 +269,7 @@ p {
   z-index: 1;
   color: var(--button-text-color);
   mix-blend-mode: difference;
+  text-transform: uppercase;
 }
 
 .buttons {
@@ -294,6 +297,10 @@ p + .buttons {
   transition: border-color 0.3s ease;
 }
 
+.card__icon-button:focus {
+  outline: 0;
+}
+
 .card__icon-button:focus-visible {
   border-color: var(--text-color);
   outline: 0;
@@ -308,84 +315,12 @@ p + .buttons {
   opacity: 0;
 }
 
-/* CORE */
-
-.core {
-  transition: fill 0.3s 0.03s ease;
+section {
+  display: flex;
+  justify-content: center;
 }
 
-.card__icon-button:hover .core {
-  fill: var(--text-color);
-  transition: fill 0.3s ease;
-}
-
-.card__icon-button:active .core {
-  fill: var(--fill-red);
-  transition: fill 0.3s ease;
-}
-
-.card__icon-button .is-liked .core {
-  fill: var(--fill-red);
-}
-
-/* MAIN BODY */
-
-.main-body {
-  transition: fill 0.3s ease;
-}
-
-.card__icon-button:hover .main-body {
-  fill: var(--text-color);
-  transition: fill 0.3s 0.05s ease;
-}
-
-.card__icon-button:active .main-body {
-  fill: var(--fill-red);
-  transition: fill 0.3s 0.05s ease;
-}
-
-.card__icon-button .is-liked .main-body {
-  fill: var(--fill-red);
-}
-
-/* CONTOUR */
-
-.card__icon-button .contour {
-  fill: var(--text-color);
-}
-
-.card__icon-button .is-liked .contour {
-  fill: var(--fill-red);
-}
-
-@keyframes scaleAnimation {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.5);
-  }
-}
-
-.is-liked .heart {
-  transform-origin: center;
-  animation: 0.3s 0.1s scaleAnimation ease-in alternate;
-}
-
-@keyframes sparksAnimation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 100%;
-  }
-}
-
-.is-liked .sparks {
-  animation: 0.3s 0.3s sparksAnimation ease-in alternate;
-}
-
-footer.centered {
+section.centered {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -394,7 +329,7 @@ footer.centered {
   padding-bottom: 105px;
 }
 
-footer .save__button {
+section .save__button {
   padding: 16.5px 19px;
   background-color: var(--bg-color);
   display: flex;
@@ -403,7 +338,7 @@ footer .save__button {
   gap: 8px;
 }
 
-footer .save__button svg {
+section .save__button svg {
   width: 21px;
   position: relative;
   z-index: 1;
