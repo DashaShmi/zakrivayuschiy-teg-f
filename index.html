@@ -559,17 +559,18 @@
     </main>
 
     <dialog id="dialog-id">
-      <div class="wrapper__dialog">
-        <svg viewBox="0 0 40 40">
-          <use href="svg/floppy.svg#floppy"></use>
-        </svg>
-        <form method="dialog">
+      <form method="dialog">
+        <div class="wrapper__dialog">
+          <svg viewBox="0 0 40 40">
+            <use href="svg/floppy.svg#floppy"></use>
+          </svg>
           <p class="descr__dialog">Вставьте дискету, чтобы продолжить</p>
-        </form>
-      </div>
-      <button class="generic__button" onclick="window['dialog-id'].close()">
-        <span class="button__text">ок</span>
-      </button>
+        </div>
+
+        <button class="generic__button" type="submit">
+          <span class="button__text">ок</span>
+        </button>
+      </form>
     </dialog>
     <script src="./scripts/like.js"></script>
   </body>
