@@ -349,6 +349,8 @@ section .save__button svg {
 dialog {
   padding: 31px;
   width: 357px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 dialog::backdrop {
