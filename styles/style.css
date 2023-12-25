@@ -131,6 +131,7 @@
   color: currentColor;
   content: "▶";
   left: -21px;
+  top: 0;
   animation: slideAnimation 0.5s ease-in-out infinite alternate;
   /* ease-in-out - функция времени анимации, которая делает анимацию плавной на входе и выходе.
   infinite - делает анимацию бесконечной.
@@ -244,7 +245,7 @@ p {
 }
 
 .generic__button:focus-visible {
-  outline: 0;
+  /* outline: 0; Правило наследуется, нет необходимости его явно указывать */
   box-shadow: 2px 2px 0px 0px;
 }
 
@@ -306,7 +307,7 @@ p + .buttons {
 
 .card__icon-button:focus-visible {
   border-color: var(--text-color);
-  outline: 0;
+  /* outline: 0; Правило наследуется, нет необходимости его явно указывать */
 }
 
 .card__icon-button .like-icon {
