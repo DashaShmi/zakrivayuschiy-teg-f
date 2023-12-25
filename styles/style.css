@@ -386,6 +386,7 @@ dialog .generic__button {
 @media (width <= 375px) {
   .page {
     width: var(--full-width);
+    margin-bottom: 100px;
   }
 
   .header-card {
@@ -411,9 +412,5 @@ dialog .generic__button {
 
   section .save__button svg {
     width: 28px;
-  }
-
-  .page {
-    margin-bottom: 100px;
   }
 }
